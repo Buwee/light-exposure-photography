@@ -46,10 +46,10 @@ export class BlogPostDetailComponent {
 
       if (trimmed.startsWith('- ') || trimmed.startsWith('* ') || (trimmed.length < 40 && !trimmed.includes('.') && !trimmed.includes(':'))) {
         if (!inList) {
-          html += '<ul class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">';
+          html += '<ul class="list-disc list-inside space-y-2 my-6 text-gray-400">';
           inList = true;
         }
-        html += `<li class="bg-gray-800/50 p-4 rounded-lg border-l-2 border-gray-600 text-gray-300 text-sm">${trimmed.replace(/^[-*]\s*/, '')}</li>`;
+        html += `<li class="pl-2">${trimmed.replace(/^[-*]\s*/, '')}</li>`;
       } else {
         if (inList) {
           html += '</ul>';

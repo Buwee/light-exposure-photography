@@ -2,15 +2,28 @@
   <h2 class="font-serif text-4xl md:text-6xl text-center mb-16 text-white">Blog</h2>
 
   <div class="max-w-2xl mx-auto flex flex-col gap-8">
-    <a *ngFor="let post of posts"
-       [routerLink]="['/blog', post.id]"
-       class="group flex flex-col md:flex-row md:items-baseline justify-between py-6 border-b border-gray-800 hover:border-gray-500 transition-colors">
-      <h3 class="font-serif text-2xl md:text-3xl text-white group-hover:text-gray-300 transition-colors mb-2 md:mb-0">
+    <div *ngFor="let post of posts" class="flex flex-col md:flex-row md:items-baseline justify-between py-6 border-b border-gray-800 hover:border-gray-500 transition-colors group">
+      <a [routerLink]="['/blog', post.id]"
+         class="font-serif text-2xl md:text-3xl text-white group-hover:text-gray-300 transition-colors mb-2 md:mb-0">
         {{ post.title }}
-      </h3>
-      <span class="text-gray-500 text-xs uppercase tracking-widest font-sans">
-        {{ post.date }}
-      </span>
-    </a>
+      </a>
+      <div class="flex items-center gap-4">
+        <button (click)="toggleLike(post, $event)"
+                class="flex items-center gap-1.5 transition-all duration-300 hover:text-white text-gray-500">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               [class.text-red-500]="post.isLiked"
+               [class.fill-current]="post.isLiked"
+               class="h-4 w-4 transition-colors"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.318a4.5 4.5 0 00-8.636-8.636L12 7.318l-7.682 7.318a4.5 4.5 0 00-2.364-8.636z" />
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+          <span class="text-xs font-sans">{{ post.likes }}</span>
+        </button>
+        <span class="text-gray-500 text-xs uppercase tracking-widest font-sans">
+          {{ post.date }}
+        </span>
+      </div>
+    </div>
   </div>
 </div>

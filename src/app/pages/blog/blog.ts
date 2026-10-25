@@ -18,54 +18,60 @@ export const BLOG_POSTS: BlogPost[] = [
 Travels in straight lines
 Has intensity, affecting brightness and contrast
 
+What Light Can Do
 Light can be:
-Reflected
-Refracted
-Absorbed
-Transmitted
+- Reflected
+- Refracted
+- Absorbed
+- Transmitted
 
 Natural light
 Natural light comes from such a distance that its beam passes through and bounces off infinite surfaces around us.
 Depending on the time of day, the season and atmospheric conditions, the sun assumes a range of contrasts, intensities and colours
-From the sun, moon, fire, etc. constantly changing in colour and intensity (time of day, weather)
-Animals also create their own light - fireflies and jellyfish - called bioluminescence
+- From the sun, moon, fire, etc. constantly changing in colour and intensity (time of day, weather)
+- Animals also create their own light - fireflies and jellyfish - called bioluminescence
 
 Artificial light
 Created by humans
 Predictable, portable and malleable
-E.g. Lamps, fluorescent lights, flashes, torches, street lights, disco lights
+- E.g. Lamps, fluorescent lights, flashes, torches, street lights, disco lights
 
 Hard light vs soft light
 
 Hard light
 Direct, strong, high contrast
 Creates sharp, dark shadows
-Examples: direct sunlight, bare lightbulb, spotlight, overhead fluorescent lights, direct flash
+- Examples: direct sunlight, bare lightbulb, spotlight, overhead fluorescent lights, direct flash
+
 Soft light
 Low contrast, gentle shadows
 Flattering for portraits
 Diffused
-Examples: cloudy day, a light with a shade, sunlight through a diffuser, indirect light, sunset/sunrise (golden hour), open shade
+- Examples: cloudy day, a light with a shade, sunlight through a diffuser, indirect light, sunset/sunrise (golden hour), open shade
 
 Using Light Creatively
 Light can reveal, hide, and create mood
 Shadows can add depth and storytelling
 Positioning subjects (front-lit, backlit, shaded) changes the image dramatically
+
 Golden Hour
 Occurs shortly after sunrise and before sunset
 Produces warm, soft, directional light with long shadows
+
 Colour & White Balance
 Light has different colour temperatures (e.g., blue daylight, yellow tungsten)
 Cameras adjust this via white balance, but photographers can manipulate it creatively
+
 Tools to Control Light
 Filters:
-UV (protection)Polarising
-Polarising (reduce reflections)
-Graduated ND (balance bright/dark areas)
+- UV (protection)Polarising
+- Polarising (reduce reflections)
+- Graduated ND (balance bright/dark areas)
+
 Reflectors & diffusers:
-Reflect light into shadows
-Soften harsh light
-Can be improvised (e.g., white card, fabric, baking paper)`,
+- Reflect light into shadows
+- Soften harsh light
+- Can be improvised (e.g., white card, fabric, baking paper)`,
     imageUrl: '',
     imageAlt: '',
     likes: 12,
@@ -149,6 +155,7 @@ A stop means doubling or halving the amount of light in an image
 +1 stop → doubles the light (brighter image)
 –1 stop → halves the light (darker image)
 Stops can be adjusted using aperture, shutter speed, or ISO
+
 Aperture
 aperture is the opening in the lens that lets light in
 Large opening (small f-number, e.g., f/2.8) → more light

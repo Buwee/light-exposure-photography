@@ -15,7 +15,28 @@ export class BlogPostDetailComponent {
 
   constructor(private route: ActivatedRoute) {
     const id = this.route.snapshot.paramMap.get('id');
-    this.post = BLOG_POSTS.find(p => p.id === id);
+    const postData = BLOG_POSTS.find(p => p.id === id);
+    if (postData) {
+      this.post = { ...postData };
+      this.syncLikeStatus();
+    }
+  }
+
+  syncLikeStatus() {
+    const likes = JSON.parse(localStorage.getItem('blog_likes') || '{}');
+    this.post.isLiked = !!likes[this.post.id];
+  }
+
+  toggleLike(event: Event) {
+    event.stopPropagation();
+    const likes = JSON.parse(localStorage.getItem('blog_likes') || '{}');
+    const currentStatus = !!likes[this.post.id];
+
+    likes[this.post.id] = !currentStatus;
+    localStorage.setItem('blog_likes', JSON.stringify(likes));
+
+    this.post.isLiked = !currentStatus;
+    this.post.likes += this.post.isLiked ? 1 : -1;
   }
 
   formatBlogContent(content: string): string {

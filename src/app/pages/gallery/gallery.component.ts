@@ -77,7 +77,6 @@ export class GalleryComponent {
     { url: 'assets/image4.png', title: 'Diffused Artificial Light', detailId: 'diffused-artificial', collection: [
         'assets/gallery/diffused-artificial-light/diffused artificial2.jpg',
         'assets/gallery/diffused-artificial-light/image 4.png',
-        'assets/gallery/diffused-artificial-light/image4.png',
         'assets/gallery/diffused-artificial-light/_DSC2897.jpg2.jpg'
       ] },
     { 

@@ -28,6 +28,24 @@ export class GalleryDetailComponent implements OnInit {
         'assets/gallery/diffused-natural-light/diffused 5.png',
         'assets/gallery/diffused-natural-light/diffused 6.png'
       ];
+    } else if (this.category === 'harsh-natural') {
+      this.images = [
+        'assets/gallery/harsh-natural-light/image 3.png',
+        'assets/gallery/harsh-natural-light/harsh 2.png',
+        'assets/gallery/harsh-natural-light/harsh 3.png',
+        'assets/gallery/harsh-natural-light/harsh 4.png',
+        'assets/gallery/harsh-natural-light/harsh 5.png',
+        'assets/gallery/harsh-natural-light/harsh 6.png'
+      ];
+    } else if (this.category === 'harsh-artificial') {
+      this.images = [
+        'assets/gallery/harsh-artificial-light/1.png',
+        'assets/gallery/harsh-artificial-light/2.png',
+        'assets/gallery/harsh-artificial-light/3.png',
+        'assets/gallery/harsh-artificial-light/gg.png',
+        'assets/gallery/harsh-artificial-light/image 5.png',
+        'assets/gallery/harsh-artificial-light/pic.png'
+      ];
     }
   }
 }

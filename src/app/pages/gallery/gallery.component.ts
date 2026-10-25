@@ -99,21 +99,57 @@ export class GalleryComponent {
         }
       ] },
     { url: 'assets/image4.png', title: 'Diffused Artificial Light', detailId: 'diffused-artificial', collection: [
-        'assets/gallery/diffused-artificial-light/diffused artificial2.jpg',
-        'assets/gallery/diffused-artificial-light/image 4.png',
-        'assets/gallery/diffused-artificial-light/_DSC2897.jpg2.jpg'
+        {
+          url: 'assets/gallery/diffused-artificial-light/diffused artificial2.jpg',
+          caption: 'I captured this photograph of a building illuminated by a blue artificial LED light, which created a very cool atmosphere. The diffused lighting subtly lights up building’s design, highlighting its unique architecture without creating harsh shadows. The blue tones contrast against the darker surroundings, helping the structure stand out as the main focal point. I particularly like how the lighting transforms the building’s appearance, creating a visually striking image and emphasising its shape and details.',
+          metadata: 'ISO 4000 • f/4.0 • 1/60 • 38.0mm'
+        },
+        {
+          url: 'assets/gallery/diffused-artificial-light/image 4.png',
+          caption: 'While walking around the university in the afternoon, I came across a softly lit corridor that caught my attention. The corridor had subtle, diffused warm artificial lighting, which I further enhanced during post-production to create a more cinematic and dramatic atmosphere. The warmer light contrasts against the dark foreground, which draws the viewer’s eye down the corridor towards the doors at the end. I positioned the camera to include the surrounding walls, creating a frame within a frame. Although the original image lacked some detail, editing helped transform the simple scene into a completely different, impactful composition.',
+          metadata: 'ISO 1000 • f/3.3 • 1/30 • 38.0mm'
+        },
+        {
+          url: 'assets/gallery/diffused-artificial-light/_DSC2897.jpg2.jpg',
+          caption: 'I was drawn towards a stairway outside of a restaurant as it was lit up by subtle, warm artificial lights, creating a very welcoming atmosphere. The soft, even lights highlights the stairs without casting any harsh shadows, keeping the details of the surrounding elements. I positioned the photograph so the viewer\'s eye is guided up the stairs and allows them to explore the entire image.',
+          metadata: 'ISO 2000 • f/4.0 • 1/30 • 48.0mm'
+        }
       ] },
-    { 
-      url: 'assets/image5.png', 
-      title: 'Harsh Artificial Light', 
+    {
+      url: 'assets/image5.png',
+      title: 'Harsh Artificial Light',
       detailId: 'harsh-artificial',
       collection: [
-        'assets/gallery/harsh-artificial-light/1.png',
-        'assets/gallery/harsh-artificial-light/2.png',
-        'assets/gallery/harsh-artificial-light/3.png',
-        'assets/gallery/harsh-artificial-light/gg.png',
-        'assets/gallery/harsh-artificial-light/image 5.png',
-        'assets/gallery/harsh-artificial-light/pic.png'
+        {
+          url: 'assets/gallery/harsh-artificial-light/1.png',
+          caption: 'I arranged two lemons against yellow paper as a background to explore colour and harsh artificial lighting. The direct light creates bright highlights on the lemons and emphasises their texture. The similar yellow tones create a cohesive composition, with the bold colour palette and strong lighting giving the image a vibrant, eye-catching look.',
+          metadata: 'ISO 1250 • f/5.6 • 1/100 • 70.0 mm'
+        },
+        {
+          url: 'assets/gallery/harsh-artificial-light/2.png',
+          caption: 'I wanted to explore how a small artificial light source could create a dramatic contrast against a completely dark background, so I photographed a lighter in a pitch-black room at night. The flame produces harsh artificial lighting, illuminating parts of my hand and allowing the rest to fade gradually into a dark shadow. I kept the camera flash off to maintain the gradual transition. I also positioned the lighter along the right rule of thirds intersection rather than centering it, creating a more balanced and engaging composition.',
+          metadata: 'ISO 2800 • f/4.5 • 1/320 • 70.0mm'
+        },
+        {
+          url: 'assets/gallery/harsh-artificial-light/3.png',
+          caption: 'I used harsh artificial lighting to photograph a Drumstick ice cream against a bright blue background. This created very strong highlights and emphasised its texture and details. The bold blue paper I used as a backdrop contrasts with the warm toppings and cone of the icec cream, making it stand out as the main focal point. I kept the composition simple to draw attention to the subject and to enhance the vibrant, playful colours.',
+          metadata: 'ISO 2500 • f/5.0 • 1/125 • 70.0 mm'
+        },
+        {
+          url: 'assets/gallery/harsh-artificial-light/gg.png',
+          caption: 'While walking my dogs by the river in the evening, I noticed the warm dock lights reflecting across the cool blue water. The bright, defined reflections create harsh artificial lighting against the dark water, making the light the main visual element. I cropped the image quite closely so the reflections almost appear abstract, and the light almost acting as a leading line that guides the viewer’s eye vertically through the frame. As the water was moving quickly, I used a fast shutter speed in order for the camera to focus. The surrounding darkness creates negative space that keeps the viewer’s attention on the reflection.',
+          metadata: 'ISO 4000 • f/6.3 • 1/320 • 52.0mm'
+        },
+        {
+          url: 'assets/gallery/harsh-artificial-light/image 5.png',
+          caption: 'Inspired by sparkler photography I had come across when researching, I decided to attempt some of my own. I wanted to experiment with capturing the bright sparks against a dark background. The sparkler produces harsh artificial light, creating sharp points of light and strong contrast against the darkness. I used a shutter speed of 1/500 to freeze the sparks and capture their fine details, which took several attempts before achieving an outcome I was happy with. I particularly like how the glowing particles and sparkler effects show the movement of the sparkler, as if it was captured in a perfect, frozen state.',
+          metadata: 'ISO 2800 • f/6.3 • 1/500 • 62.0mm'
+        },
+        {
+          url: 'assets/gallery/harsh-artificial-light/pic.png',
+          caption: 'I used a sunset lamp to create harsh artificial lighting, which created sharp shadows that highlight the plant\'s intricate roots. I chose a pinkish-orange tone to imitate a natural sunset. This created a warm and cozy atmosphere that contrasts against the dark background. The negative space keeps the composition minimal, and the plant\'s vertical stem acts as a leading line, guiding the viewer’s eye from the leaves down to the tangled roots.',
+          metadata: 'ISO 2200 • f/4.5 • 1/60 • 35.0mm'
+        }
       ]
     },
   ];

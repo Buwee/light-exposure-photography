@@ -1,0 +1,14 @@
+.blog-content h4 {
+  color: white;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+}
+
+.blog-content ul {
+  list-style: none;
+  padding: 0;
+}

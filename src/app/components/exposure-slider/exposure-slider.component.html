@@ -1,0 +1,42 @@
+<div class="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4 bg-black/40 backdrop-blur-md p-6 rounded-lg text-white font-sans transition-all duration-500">
+
+  <div *ngIf="showAdvanced" class="flex flex-col gap-3 mb-4 animate-fade-in">
+    <div class="text-[10px] uppercase tracking-[0.2em] opacity-50 mb-2 text-center">Advanced Effects</div>
+    <div class="grid grid-cols-2 gap-2">
+      <button (click)="setEffect('cyanotype')" [class.bg-white]="currentEffect === 'cyanotype'" [class.bg-white/10]="currentEffect !== 'cyanotype'" [class.text-black]="currentEffect === 'cyanotype'" class="px-3 py-2 text-[9px] uppercase tracking-widest transition-all rounded-sm">Cyanotype</button>
+      <button (click)="setEffect('duotone')" [class.bg-white]="currentEffect === 'duotone'" [class.bg-white/10]="currentEffect !== 'duotone'" [class.text-black]="currentEffect === 'duotone'" class="px-3 py-2 text-[9px] uppercase tracking-widest transition-all rounded-sm">Duotone</button>
+      <button (click)="setEffect('grain')" [class.bg-white]="currentEffect === 'grain'" [class.bg-white/10]="currentEffect !== 'grain'" [class.text-black]="currentEffect === 'grain'" class="px-3 py-2 text-[9px] uppercase tracking-widest transition-all rounded-sm">Film Grain</button>
+      <button (click)="setEffect('vignette')" [class.bg-white]="currentEffect === 'vignette'" [class.bg-white/10]="currentEffect !== 'vignette'" [class.text-black]="currentEffect === 'vignette'" class="px-3 py-2 text-[9px] uppercase tracking-widest transition-all rounded-sm">Vignette</button>
+      <button (click)="setEffect('grid')" [class.bg-white]="currentEffect === 'grid'" [class.bg-white/10]="currentEffect !== 'grid'" [class.text-black]="currentEffect === 'grid'" class="px-3 py-2 text-[9px] uppercase tracking-widest transition-all rounded-sm">Rule of Thirds</button>
+      <button (click)="setEffect('lightleaks')" [class.bg-white]="currentEffect === 'lightleaks'" [class.bg-white/10]="currentEffect !== 'lightleaks'" [class.text-black]="currentEffect === 'lightleaks'" class="px-3 py-2 text-[9px] uppercase tracking-widest transition-all rounded-sm">Light Leaks</button>
+    </div>
+  </div>
+
+  <div class="flex gap-2 mb-2">
+    <button (click)="setEffect('none')" [class.border-white]="currentEffect === 'none'" [class.border-transparent]="currentEffect !== 'none'" [class.bg-white/10]="currentEffect === 'none'" [class.bg-transparent]="currentEffect !== 'none'" class="px-3 py-1 text-[10px] uppercase tracking-widest transition-all duration-300 rounded-sm border-b-2 text-white">Colour</button>
+    <button (click)="setEffect('grayscale')" [class.border-white]="currentEffect === 'grayscale'" [class.border-transparent]="currentEffect !== 'grayscale'" [class.bg-white/10]="currentEffect === 'grayscale'" [class.bg-transparent]="currentEffect !== 'grayscale'" class="px-3 py-1 text-[10px] uppercase tracking-widest transition-all duration-300 rounded-sm border-b-2 text-white">B&W</button>
+    <button (click)="setEffect('sepia')" [class.border-white]="currentEffect === 'sepia'" [class.border-transparent]="currentEffect !== 'sepia'" [class.bg-white/10]="currentEffect === 'sepia'" [class.bg-transparent]="currentEffect !== 'sepia'" class="px-3 py-1 text-[10px] uppercase tracking-widest transition-all duration-300 rounded-sm border-b-2 text-white">Sepia</button>
+  </div>
+
+  <button (click)="toggleAdvanced()" class="w-full py-1 text-[10px] uppercase tracking-widest border border-white/20 hover:bg-white/10 transition-all rounded-sm mb-4">
+    {{ showAdvanced ? 'Close Options' : 'More Options' }}
+  </button>
+
+  <div class="flex items-center gap-4">
+    <div class="flex flex-col items-end gap-2">
+      <label for="exposure" class="text-xs uppercase tracking-tighter opacity-70">Exposure</label>
+      <input id="exposure" type="range" min="0" max="200" [value]="exposureValue" (input)="updateExposure($event)" class="w-32 accent-white cursor-pointer">
+    </div>
+
+    <div class="relative group">
+      <button (click)="reset()" class="p-2 hover:bg-white/10 rounded-full transition-colors group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white opacity-60 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+      </button>
+      <span class="absolute bottom-full right-0 mb-2 px-2 py-1 bg-black text-white text-[10px] uppercase tracking-widest rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+        Reset to Original
+      </span>
+    </div>
+  </div>
+</div>

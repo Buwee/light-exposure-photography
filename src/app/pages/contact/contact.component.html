@@ -1,0 +1,47 @@
+<div class="min-h-screen bg-[#121212] pt-24 px-6 md:px-12 flex flex-col items-center text-white">
+  <h2 class="font-serif text-4xl md:text-6xl text-center mb-12 text-white">Contact</h2>
+  
+  <!-- Success Message -->
+  <div *ngIf="isSubmitted" class="w-full max-w-lg text-center p-8 bg-white/5 border border-white/10 animate-fade-in">
+    <h3 class="font-serif text-2xl mb-4">Message Sent</h3>
+    <p class="text-gray-400 mb-6">Thank you for reaching out. I will get back to you shortly.</p>
+    <button (click)="resetForm()" class="text-xs uppercase tracking-widest border-b border-white/30 pb-1 hover:border-white transition-colors">Send another message</button>
+  </div>
+
+  <!-- Contact Form -->
+  <form *ngIf="!isSubmitted" (submit)="onSubmit(); $event.preventDefault()" class="w-full max-w-lg flex flex-col gap-4 font-sans">
+    
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="text-red-400 text-xs uppercase tracking-widest text-center mb-2 animate-bounce">
+      {{ errorMessage }}
+    </div>
+
+    <input 
+      type="text" 
+      [(ngModel)]="formData.name" 
+      name="name"
+      placeholder="Name" 
+      class="p-3 bg-gray-900 border border-gray-700 text-white rounded-none focus:outline-none focus:border-white transition-colors"
+    >
+    
+    <input 
+      type="email" 
+      [(ngModel)]="formData.email" 
+      name="email"
+      placeholder="Email" 
+      class="p-3 bg-gray-900 border border-gray-700 text-white rounded-none focus:outline-none focus:border-white transition-colors"
+    >
+    
+    <textarea 
+      [(ngModel)]="formData.message" 
+      name="message"
+      placeholder="Message" 
+      rows="5" 
+      class="p-3 bg-gray-900 border border-gray-700 text-white rounded-none focus:outline-none focus:border-white transition-colors"
+    ></textarea>
+    
+    <button type="submit" class="bg-white text-black p-3 uppercase tracking-widest text-sm hover:bg-gray-200 transition-colors">
+      Send Message
+    </button>
+  </form>
+</div>

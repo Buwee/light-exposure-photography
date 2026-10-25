@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
 interface BlogPost {
+  id: string;
   title: string;
   date: string;
   content: string;
@@ -78,7 +76,7 @@ Can be improvised (e.g., white card, fabric, baking paper)`,
     title: 'Composition',
     date: 'October 20, 2026',
     content: `Composition is the manner in which you place objects within your frame which aid you to tell your story. This means how you display the elements to best move the viewer's eye around the frame.
-we use composition to order music, arrange our home, and emphasise elements in our art. Composition in photography is no different to this, except that we tend to think of photographic composition as the way the photographer places the elements so as to move the viewer's eye around the frame. It is also the way we move ourselves physically as photographers to engage with what we want in or out of the frame and where it's positioned.
+we use composition to order music, arrange our home, and emphasise elements in our art. Composition in photography is no difference to this, except that we tend to think of photographic composition as the way the photographer places the elements so as to move the viewer's eye around the frame. It is also the way we move ourselves physically as photographers to engage with what we want in or out of the frame and where it's positioned.
 
 Compositional Elements & Techniques
 Composition is the way that you arrange the elements within the frame and how that supports the core idea of your work. There are a number of different techniques that can be used to engage viewers:
@@ -160,7 +158,7 @@ Changing aperture by one stop doubles or halves the light entering the camera
 Shutter Speed
 Shutter speed is how long the camera sensor is exposed to light
 Slower shutter speed (longer time open) → more light
-Faster shutter speed (shorter time open) → less light
+Faster shutter shutter speed (shorter time open) → less light
 
 ISO
 ISO controls the sensor’s sensitivity to light
@@ -191,7 +189,7 @@ A common starting exposure if unsure is about ISO 100, f/5.6, and 1/125s, then a
 Adjusting exposure:
 If the image is too bright → reduce light (smaller aperture or faster shutter speed)
 If the image is too dark → increase light (wider aperture or slower shutter speed)
-Sometimes scenes have very bright and dark areas, so photographers must decide what part of the image to expose correctly (e.g. subject vs background)
+Sometimes scenes have very bright and dark areas, so photographers must decide what part of, the image to expose correctly (e.g. subject vs background)
 It is usually better to avoid overexposing, because lost highlights cannot easily be recovered, while shadow details can often be restored, especially when shooting in RAW format
 
 Bucket example:

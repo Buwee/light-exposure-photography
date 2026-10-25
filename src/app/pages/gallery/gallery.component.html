@@ -32,17 +32,25 @@
        class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 md:p-12 transition-all duration-300"
        (click)="closeLightbox()">
     
-    <!-- Close Button: Now relative to the image container -->
-    <div class="relative max-w-full max-h-full">
+    <!-- Image and Close Button Container -->
+    <div class="relative flex flex-col items-center">
+      <!-- Close Button -->
       <button (click)="closeLightbox(); $event.stopPropagation()" 
-              class="absolute -top-12 right-0 text-white opacity-60 hover:opacity-100 transition-opacity z-[110]">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              class="absolute -top-12 right-0 text-white opacity-60 hover:opacity-100 transition-opacity z-[110] flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
+      
       <img [src]="selectedImage" 
-           class="max-w-full max-h-full object-contain shadow-2xl animate-fade-in"
+           class="max-w-full max-h-[70vh] object-contain shadow-2xl animate-fade-in"
            (click)="$event.stopPropagation()">
+
+      <!-- Caption & Metadata: Now correctly placed below the image -->
+      <div *ngIf="selectedImageMetadata" class="mt-6 text-center max-w-2xl animate-fade-in">
+        <p class="text-gray-400 font-sans text-sm leading-relaxed mb-3">{{ selectedImageMetadata.caption }}</p>
+        <p class="text-gray-600 font-sans text-xs uppercase tracking-widest">{{ selectedImageMetadata.meta }}</p>
+      </div>
     </div>
 
     <!-- Prev Arrow -->

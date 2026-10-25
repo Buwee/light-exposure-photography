@@ -67,12 +67,36 @@ export class GalleryComponent {
       ]
     },
     { url: 'assets/image3.png', title: 'Harsh Natural Light', detailId: 'harsh-natural', collection: [
-        'assets/gallery/harsh-natural-light/image 3.png',
-        'assets/gallery/harsh-natural-light/harsh 2.png',
-        'assets/gallery/harsh-natural-light/harsh 3.png',
-        'assets/gallery/harsh-natural-light/harsh 4.png',
-        'assets/gallery/harsh-natural-light/harsh 5.png',
-        'assets/gallery/harsh-natural-light/harsh 6.png'
+        {
+          url: 'assets/gallery/harsh-natural-light/image 3.png',
+          caption: 'I captured this image late in the morning when direct sunlight came through the window and illuminated my dog as she sun bathed. I used the harsh natural lighting to create strong contrast between the bright areas and darker shadows, helping to isolate her as the main subject. The shadow acts as a leading line, guiding the viewer’s eye towards her face, while the directional sunlight highlights details such as her eyes, shiny nose and her individual strands of fur.',
+          metadata: 'ISO 100 • f/6.3 • 1/320 • 38.0mm'
+        },
+        {
+          url: 'assets/gallery/harsh-natural-light/harsh 2.png',
+          caption: 'I wanted to experiment with prism photography using a crystal candle holder on my outdoor table, which caught my attention when the midday sunlight hit it directly. The harsh natural lighting created sharp highlights and reflections, contrasting against the dark background. I used a low ISO and smaller aperture to manage the bright light and prevent any overexposure. After experimenting with different angles, I focused on the right side of the object, where a shadow and subtle rainbow effect was created by the refracted sunlight, making the image a lot more interesting.',
+          metadata: 'ISO 100 • f/8.0 • 1/320 • 62.0mm'
+        },
+        {
+          url: 'assets/gallery/harsh-natural-light/harsh 3.png',
+          caption: 'I photographed a dragonfly in my garden, taking advantage of the opportunity to capture one as they are a fast-moving subject. I used a high shutter speed to freeze any movement and achieve a sharp image. Taken around midday, the photograph features harsh natural lighting, with bright highlights on the dragonfly and surrounding leaves. The direct sunlight creates contrast between the illuminated subject and the darker background, helping the dragonfly stand out as the focal point. Although some shadows remain relatively soft, the stronger highlights add depth to the image and reveal fine details in the dragonfly’s wings and body.',
+          metadata: 'ISO 1000 • f/4.5 • 1/4000 • 70.0mm'
+        },
+        {
+          url: 'assets/gallery/harsh-natural-light/harsh 4.png',
+          caption: 'I captured this image while walking my friend\'s dog in Maleny on a bright, sunny morning. The open grassy fields and surrounding hills created a perfect environment to explore negative space, with the person and dog becoming the focal point against the wider landscape. The natural sunlight brought out the vibrant greens of the grass and the blues of the sky. I used a smaller aperture to help maintain sharpness throughout the image. The balanced areas of grass, trees and sky create a sense of openness and visual harmony, creating negative space and allowing the viewer’s attention to settle naturally on the person and dog.',
+          metadata: 'ISO 800 • f/10.0 • 1/1000 • 38.0mm'
+        },
+        {
+          url: 'assets/gallery/harsh-natural-light/harsh 5.png',
+          caption: 'I came across a graffiti alley tucked away behind a building and I was drawn to the variety of colours and expressive artwork covering the walls. I focused on a specific section where the tree casted shadows onto the graffiti, creating the illusion of vines growing over the artwork. I took this on a sunny afternoon, featuring direct natural lighting, with the shadows contrast against the vibrant colours. I used a low ISO and narrow aperture to manage the bright sunlight and prevent overexposure, while zooming in on the artwork helped create a more focused composition. I made the image black and white in post-production to focus more on the light exposure rather than the colouring.',
+          metadata: 'ISO 140 • f/11.0 • 1/160 • 42.0mm'
+        },
+        {
+          url: 'assets/gallery/harsh-natural-light/harsh 6.png',
+          caption: 'This is a close-up photograph of my dog which explores how harsh natural lighting can isolate a subject and create a dramatic effect. The direct sunlight illuminates only her nose, while the rest of her face is shadowed, creating a strong contrast. This lighting draws the viewer’s attention towards her nose and highlights its texture, and the darker areas reveal less detail and add a sense of depth to the image.',
+          metadata: 'ISO 100 • f/6.3 • 1/320 • 70.0mm'
+        }
       ] },
     { url: 'assets/image4.png', title: 'Diffused Artificial Light', detailId: 'diffused-artificial', collection: [
         'assets/gallery/diffused-artificial-light/diffused artificial2.jpg',
@@ -143,11 +167,7 @@ export class GalleryComponent {
   updateMetadata() {
     if (this.selectedImageIndex === null) return;
 
-    const categoryImg = this.images.find(img =>
-      img.collection && img.collection.some(item =>
-        (typeof item === 'string' ? item : item.url) === this.selectedImage
-      )
-    );
+    const categoryImg = this.images.find(img => img.detailId === this.selectedCollection);
 
     if (categoryImg && categoryImg.collection) {
       const item = categoryImg.collection[this.selectedImageIndex];
@@ -157,8 +177,6 @@ export class GalleryComponent {
           meta: item.metadata || ''
         };
       } else {
-        // FIX: Use the category caption if the image in the collection is
-        // logically the same as the main category image, OR if it's the first image.
         const isFirstImage = this.selectedImageIndex === 0;
         const isMainImage = this.selectedImage === categoryImg.url;
 
